@@ -4,66 +4,27 @@ import BlogPostCard from "../../components/BlogPostCard.astro";
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob("../posts/*.md")
-  return [
-    {
+  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())]
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag))
+    return {
       params: {
-        tag: "astro"
+        tag
       },
       props: {
-        posts: allPosts
+        posts: filteredPosts
       }
-    },
-    {
-      params: {
-        tag: "success"
-      },
-      props: {
-        posts: allPosts
-      }
-    },
-    {
-      params: {
-        tag: "community"
-      },
-      props: {
-        posts: allPosts
-      }
-    },
-    {
-      params: {
-        tag: "blogging"
-      },
-      props: {
-        posts: allPosts
-      }
-    },
-    {
-      params: {
-        tag: "setbacks"
-      },
-      props: {
-        posts: allPosts
-      }
-    },
-    {
-      params: {
-        tag: "learning in public"
-      },
-      props: {
-        posts: allPosts
-      }
-    },
-  ]
+    }
+  })
 }
 
 const { tag } = Astro.params
 const { posts } = Astro.props
-const filteredPosts = posts.filter((post) => post.frontmatter.tags.includes(tag))
 ---
 <BaseLayout pageTitle={tag}>
   <p>Posts tagged with {tag}</p>
   <ul>
-    {filteredPosts.map((post) =>
+    {posts.map((post) =>
       <BlogPostCard url={post.url} frontmatter={post.frontmatter} />
     )}
   </ul>
