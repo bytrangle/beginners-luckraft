@@ -6,8 +6,10 @@ html {
 body {
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
   padding: 1rem;
+  /* ensures that the dark bacground color will
+  cover the whole height of the viewport */
+  min-height: 100vh; 
   line-height: 1.5;
 }
 
