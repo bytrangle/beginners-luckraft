@@ -1,14 +1,16 @@
 ---
 import Navigation from "./Navigation.astro";
 import Hamburger from "./Hamburger.astro";
-import ThemeIcon from "./ThemeIcon.astro"
+import ThemeSwitcher from "./ThemeSwitcher.astro"
 ---
-<header>
-  <nav>
-    <Hamburger />
-    <ThemeIcon />
-    <Navigation />
-  </nav>
+<header class="top-navigation">
+  <div class="container">
+    <nav>
+      <Hamburger />
+      <Navigation />
+    </nav>
+    <ThemeSwitcher />
+  </div>
 </header>
 
 <style>
