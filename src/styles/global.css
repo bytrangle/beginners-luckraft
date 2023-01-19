@@ -11,12 +11,18 @@
 
 @media (prefers-color-scheme: light) {
   :root:not(.light):not(.dark) {
+    --background-primary: ##e8d9cf;
+    --background-secondary: #f9f9fb;
+    --background-tertiary: #fff;
     --text-primary: #1b1b1b;
     --text-secondary: #4e4e4e;
   }
 }
 @media (prefers-color-scheme: dark) {
   :root:not(.light):not(.dark) {
+    --background-primary: #1b1b1b;
+    --background-secondary: #343434;
+    --background-tertiary: #4e4e4e;
     --text-primary: #fff;
     --text-secondary: #cdcdcd;
   }
@@ -57,7 +63,7 @@ body {
 }
 
 .light {
-  --background-primary: #fff;
+  --background-primary: ##e8d9cf;
   --background-secondary: #f9f9fb;
   --background-tertiary: #fff;
   --text-primary: #1b1b1b;
