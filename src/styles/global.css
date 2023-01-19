@@ -41,8 +41,21 @@ body {
   background-color: #0d0950;
   color: #fff;
 }
-.dark .nav-links a {
-  color: #fff;
+
+.dark {
+  --background-primary: #1b1b1b;
+  --background-secondary: #343434;
+  --background-tertiary: #4e4e4e;
+  --text-primary: #fff;
+  --text-secondary: #cdcdcd;
+}
+
+.light {
+  --background-primary: #fff;
+  --background-secondary: #f9f9fb;
+  --background-tertiary: #fff;
+  --text-primary: #1b1b1b;
+  --text-secondary: #4e4e4e;
 }
 
 * {
