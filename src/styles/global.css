@@ -44,9 +44,8 @@ body {
   line-height: 1.5;
 }
 
-.dark body {
-  background-color: #0d0950;
-  color: #fff;
+.button {
+  --button-height: var(--form-elem-height, 2rem);
 }
 
 .dark {
@@ -129,4 +128,34 @@ h1 {
   .hamburger {
     display: none;
   }
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  text-decoration: none;
+}
+.button, button {
+  appearance: none;
+  background: none;
+  border: none;
+}
+.button.action {
+  --button-bg: transparent;
+  --button-border-color: var(--text-secondary);
+  --button-color: var(--text-secondary);
+}
+.button.action.has-icon {
+  --button-font: var(--type-emphasis-m);
+}
+.button-wrap {
+  align-items: center;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  display: flex;
+  font: var(--button-font);
+  gap: 0.25rem;
+  justify-content: center;
+  position: relative;
 }
