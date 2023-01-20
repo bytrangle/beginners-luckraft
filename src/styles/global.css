@@ -11,7 +11,7 @@
 
 @media (prefers-color-scheme: light) {
   :root:not(.light):not(.dark) {
-    --background-primary: ##e8d9cf;
+    --background-primary: #e8d9cf;
     --background-secondary: #f9f9fb;
     --background-tertiary: #fff;
     --text-primary: #1b1b1b;
@@ -63,7 +63,7 @@ body {
 }
 
 .light {
-  --background-primary: ##e8d9cf;
+  --background-primary: #e8d9cf;
   --background-secondary: #f9f9fb;
   --background-tertiary: #fff;
   --text-primary: #1b1b1b;
