@@ -3,6 +3,8 @@
 :root {
   --brand-color-black: #1b1b1b;
   --brand-color-black-10: #343434;
+  --brand-color-black-20: #4e4e4e;
+  --brand-color-black-30: #cdcdcd;
   --brand-color-primary: var(--brand-color-black);
   --brand-color-secondary: var(--brand-color-black-10);
   --base-font-size: 100%;
@@ -102,6 +104,7 @@ body {
 }
 
 .dark {
+  --brand-color-secondary: var(--brand-color-black-30);
   --background-primary: #1b1b1b;
   --background-secondary: #343434;
   --background-tertiary: #4e4e4e;

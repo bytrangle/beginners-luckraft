@@ -16,6 +16,22 @@
 </div>
 
 <style>
+  :global(.light) .moon {
+    fill: transparent;
+  }
+  :global(.light) .sun {
+    fill : var(--brand-color-secondary);
+  }
+  :global(.dark) .sun {
+    fill: transparent;
+  }
+  :global(.dark) .moon {
+    fill: var(--brand-color-secondary);
+  }
+  /* :global(.light) .sun {
+    fill: var(--brand-color-secondary);
+  }
+  :global(.light) . */
   /* .sun { fill: black; }
   .moon { fill: transparent; }
   
