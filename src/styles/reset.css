@@ -1,0 +1,7 @@
+a {
+  text-decoration: none;
+}
+
+ol[class], li[class] {
+  list-style: none;
+}

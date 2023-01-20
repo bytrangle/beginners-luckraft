@@ -1,3 +1,5 @@
+@import "./reset.css";
+
 :root {
   --base-font-size: 100%;
   --font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
