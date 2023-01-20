@@ -5,27 +5,17 @@ import ThemeSwitcher from "./ThemeSwitcher.astro"
 import logo from "../../public/beginners-luckraft-logo.png"
 ---
 <header class="top-navigation">
-  <div class="container">
-    <div class="top-navigation-logo">
-      <a href="/">
-        <img src={logo} width="600" alt="Beginner's Luckraft logo" />
+  <div class="top-nav-container long-container">
+    <div class="top-nav-logo">
+      <a href="/" class="top-nav-logo-link">
+        <img src={logo} alt="Beginner's Luckraft logo" />
       </a>
     </div>
-    <div class="top-navigation-main">
       <!-- <Hamburger /> -->
       <Navigation />
-    </div>
     <ThemeSwitcher />
   </div>
 </header>
 
 <style>
-  .top-navigation-logo {
-    text-align: center;
-  }
-  .top-navigation-main {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
 </style>

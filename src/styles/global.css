@@ -7,12 +7,15 @@
   --font-body-strong-weight: 600;
   --line-height-base: 1.75;
   --form-elem-height: 2rem;
-  --spacing-sizing-1: 16px;
-  --spacing-sizing-025: calc(var(--spacing-sizing-1) / 4);
-  --spacing-sizing-05: calc(var(--spacing-sizing-1) / 2);
-  --spacing-sizing-075: calc(var(--spacing-sizing-1) * 0.75)
+  --spacing-sizing-base: 16px;
+  --spacing-sizing-025: calc(var(--spacing-sizing-base) / 4);
+  --spacing-sizing-05: calc(var(--spacing-sizing-base) / 2);
+  --spacing-sizing-075: calc(var(--spacing-sizing-base) * 0.75);
+  --spacing-sizing-2: calc(var(--spacing-sizing-base) * 2);
+  --spacing-sizing-4: calc(var(--spacing-sizing-base) * 4);
   --type-emphasis-m: var(--font-body-strong-weight) var(--type-smaller-font-size) /1.23 var(--font-body);
   --type-smaller-font-size: 0.833rem;
+  --width-content-max: 1240px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -59,9 +62,39 @@ body {
   display: flex;
   flex-direction: column;
   height: auto;
-  margin: 0 var(--spacing-sizing-1);
   min-height: 100%;
 }
+
+.long-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+.top-nav-container {
+  --height-top-nav: var(--spacing-sizing-4);
+  max-width: var(--width-content-max);
+}
+@media (min-width: 1000px) {
+  .top-nav-container {
+    padding-left: var(--spacing-sizing-2);
+    padding-right: var(--spacing-sizing-2)
+  }
+}
+.top-nav-logo {
+  text-align: center;
+}
+.top-nav-logo-link {
+  display: inline-block;
+  max-height: var(--height-top-nav);
+}
+.top-nav-logo-link img {
+  max-height: var(--height-top-nav);
+  max-width: 100%;
+  width: auto;
+}
+/* .long-nav {
+  display: flex;
+  align-items: ;
+} */
 
 .button {
   --button-height: var(--form-elem-height, 2rem);
