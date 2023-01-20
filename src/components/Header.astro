@@ -6,16 +6,34 @@ import logo from "../../public/beginners-luckraft-logo.png"
 ---
 <header class="top-navigation">
   <div class="top-nav-container long-container">
-    <div class="top-nav-logo">
-      <a href="/" class="top-nav-logo-link">
-        <img src={logo} alt="Beginner's Luckraft logo" />
-      </a>
-    </div>
-      <!-- <Hamburger /> -->
-      <Navigation />
-    <ThemeSwitcher />
+    <!-- <div class="top-nav-inner"> -->
+      <div class="top-nav-logo">
+        <a href="/" class="top-nav-logo-link">
+          <img src={logo} alt="Beginner's Luckraft logo" />
+        </a>
+      </div>
+        <!-- <Hamburger /> -->
+      <!-- <Navigation /> -->
+      <ThemeSwitcher />
+    <!-- </div> -->
   </div>
 </header>
 
 <style>
+  .top-nav-container {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .top-nav-inner {
+    position: relative;
+  }
+  .top-nav-logo {
+    grid-column-start: 2;
+    text-align: center;
+  }
+  .top-nav-logo-link {
+    display: inline-flex;
+    justify-content: center;
+  }
 </style>

@@ -1,6 +1,7 @@
 ---
 
 ---
+<div class="theme-switcher">
 <div id="themeToggle" class="theme-switch-menu">
   <button aria-haspopup="menu" type="button" class="button action has-icon theme-switcher-menu small">
     <span class="button-wrap">
@@ -12,14 +13,15 @@
     </span>
 </button>
 </div>
+</div>
 
 <style>
-  .sun { fill: black; }
+  /* .sun { fill: black; }
   .moon { fill: transparent; }
   
 
   :global(.dark) .sun { fill: transparent; }
-  :global(.dark) .moon { fill: white; }
+  :global(.dark) .moon { fill: white; } */
 </style>
 
 <script>
@@ -57,3 +59,11 @@
   }
   document.getElementById("themeToggle").addEventListener("click", handleToggleClick)
 </script>
+
+<style>
+  /* .theme-switch-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+  } */
+</style>

@@ -1,6 +1,10 @@
 @import "./reset.css";
 
 :root {
+  --brand-color-black: #1b1b1b;
+  --brand-color-black-10: #343434;
+  --brand-color-primary: var(--brand-color-black);
+  --brand-color-secondary: var(--brand-color-black-10);
   --base-font-size: 100%;
   --font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
   --font-body: Inter, var(--font-fallback);
@@ -72,6 +76,7 @@ body {
 .top-nav-container {
   --height-top-nav: var(--spacing-sizing-4);
   max-width: var(--width-content-max);
+  padding-top: var(--spacing-sizing-2);
 }
 @media (min-width: 1000px) {
   .top-nav-container {
@@ -79,15 +84,11 @@ body {
     padding-right: var(--spacing-sizing-2)
   }
 }
-.top-nav-logo {
-  text-align: center;
-}
 .top-nav-logo-link {
-  display: inline-block;
   max-height: var(--height-top-nav);
 }
 .top-nav-logo-link img {
-  max-height: var(--height-top-nav);
+  height: var(--height-top-nav);
   max-width: 100%;
   width: auto;
 }
