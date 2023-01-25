@@ -64,14 +64,15 @@ body {
   width: 100%;
 }
 
+/* LAYOUT  */
+
 .site-wrapper {
   display: flex;
   flex-direction: column;
   height: auto;
   min-height: 100%;
 }
-
-.long-container {
+.l-container {
   margin-left: auto;
   margin-right: auto;
 }
