@@ -1,11 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+import Intro from "../components/Intro.astro"
 import Greeting from "../components/Greeting.jsx"
 
 const pageTitle = "Home Page"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2>My awesome blog subtitle</h2>
-	<Greeting client:load message={["Hej", "Hallo", "Hola", "Habari"]}/>
+	<div class="l-block l-container l-container--10-of-12 hero hero--grid home-hero">
+		<Intro />
+	</div>
 </BaseLayout>
