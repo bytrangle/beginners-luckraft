@@ -18,8 +18,10 @@ const { pageTitle, class: className } = Astro.props
 	<body>
 		<div class="site-wrapper">
 			<Header />
-			<h1>{pageTitle}</h1>
+			<main class="l-main">
+			<!-- <h1>{pageTitle}</h1> -->
 			<slot />
+			</main>
 			<Footer />
 		</div>
 		<script>
