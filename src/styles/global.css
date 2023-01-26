@@ -18,10 +18,12 @@
   --spacing-sizing-025: calc(var(--spacing-sizing-base) / 4);
   --spacing-sizing-05: calc(var(--spacing-sizing-base) / 2);
   --spacing-sizing-075: calc(var(--spacing-sizing-base) * 0.75);
+  --spacing-sizing-1\/5: calc(var(--spacing-sizing-base) * 1.5);
   --spacing-sizing-2: calc(var(--spacing-sizing-base) * 2);
   --spacing-sizing-3: calc(var(--spacing-sizing-base) * 3);
   --spacing-sizing-4: calc(var(--spacing-sizing-base) * 4);
   --spacing-sizing-5: calc(var(--spacing-sizing-base) * 5);
+  --text-xl: var(--spacing-sizing-1\/5);
   --text-xxl: var(--spacing-sizing-3);
   --type-emphasis-m: var(--font-body-strong-weight) var(--type-smaller-font-size) /1.23 var(--font-body);
   --type-smaller-font-size: 0.833rem;
@@ -30,8 +32,16 @@
   --width-md-10-col: 980px
 }
 
+@media (min-width: 760px) {
+  :root {
+    --text-xl: var(--spacing-sizing-2);
+    --text-xxl: var(--spacing-sizing-3);
+  }
+}
+
 @media (min-width: 1000px) {
   :root {
+    --text-xl: var(--spacing-sizing-3);
     --text-xxl: var(--spacing-sizing-4);
   }
 }
