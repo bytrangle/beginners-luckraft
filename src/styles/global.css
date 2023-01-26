@@ -103,6 +103,9 @@ body {
     --pad-vt: var(--spacing-sizing-5);
   }
 }
+.l-block--no-pad-top {
+  padding-top: 0;
+}
 .l-container--10-of-12, .l-container--8-of-12 {
   box-sizing: content-box;
 }
