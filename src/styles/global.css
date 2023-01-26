@@ -11,6 +11,7 @@
   --font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
   --font-body: Inter, var(--font-fallback);
   --font-body-strong-weight: 600;
+  --font-weight-black: 900;
   --line-height-base: 1.75;
   --form-elem-height: 2rem;
   --spacing-sizing-base: 16px;
@@ -122,6 +123,10 @@ body {
     padding-left: var(--spacing-sizing-2);
     padding-right: var(--spacing-sizing-2)
   }
+}
+.t-new-subhead {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-black);
 }
 .top-nav-logo-link {
   max-height: var(--height-top-nav);
