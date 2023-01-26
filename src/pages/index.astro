@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Intro from "../components/Intro.astro"
+import HomeCollection from "../components/HomeCollection.astro";
 
 const pageTitle = "Home Page"
 ---
@@ -9,4 +10,7 @@ const pageTitle = "Home Page"
 	<div class="l-block l-container l-container--10-of-12 hero hero--grid home-hero">
 		<Intro />
 	</div>
+	<section class="l-block l-block--no-pad-top l-container l-container--10-of-12">
+		<HomeCollection />
+	</section>
 </BaseLayout>
