@@ -143,6 +143,12 @@ body {
     padding-right: var(--spacing-sizing-2)
   }
 }
+.t-heading {
+  font-size: var(--text-xxl);
+}
+.t-new-body {
+  font-size: var(--text-base);
+}
 .t-new-subhead {
   font-size: var(--text-xl);
   font-weight: var(--font-weight-black);
