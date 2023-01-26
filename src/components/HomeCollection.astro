@@ -1,17 +1,21 @@
 ---
 import { Icon } from "astro-icon"
+import squiggle from "../icons/squiggle.svg"
+const squiggleUrl = `url("${squiggle}")`
 ---
 <div>
-  <h2 class="t-new-subhead">Free patterns for any 
-    <span class="highlight-container">
+  <h2 class="t-heading">Free patterns for any 
+    <span class="highlight-text">yarn weight
+    </span>
+    <!-- <span class="highlight-container">
       <span class="highlight">
         <Icon name="squiggle" />
       </span>yarn weight
-    </span>
+    </span> -->
   </h2>
 </div>
 
-<style>
+<style define:vars={{ squiggleUrl }}>
   .highlight-container {
     position: relative;
   }
@@ -28,5 +32,14 @@ import { Icon } from "astro-icon"
     bottom: 0;
     width: 100%;
     height: auto;
+  }
+  [astro-icon] path {
+    fill: var(--brand-color-pink);
+  }
+  .highlight-text {
+    background-image: var(--squiggleUrl);
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: var(--spacing-sizing-075);
   }
 </style>
