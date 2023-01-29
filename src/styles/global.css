@@ -40,14 +40,14 @@
 
 @media (min-width: 760px) {
   :root {
-    --text-xl: var(--spacing-sizing-2);
     --text-xxl: var(--spacing-sizing-3);
   }
 }
 
 @media (min-width: 1000px) {
   :root {
-    --text-xl: var(--spacing-sizing-3);
+    --text-base: calc(var(--spacing-sizing-base) * 1.125);
+    --text-xl: var(--spacing-sizing-2);
     --text-xxl: var(--spacing-sizing-4);
   }
 }
