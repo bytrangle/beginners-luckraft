@@ -1,8 +1,13 @@
 ---
+import { Image } from "@astrojs/image/components"
 import { Icon } from "astro-icon"
+import localImage from "../knitting-gauge-formula.jpeg"
 import squiggle from "../icons/squiggle.svg"
 const squiggleUrl = `url("${squiggle}")`
+const allFreePatterns = await Astro.glob("../pages/free-patterns/*.md")
+const knittingGauge = allFreePatterns.find(e => e.frontmatter.title === "How to Knit with Your Own Gauge")
 ---
+<!-- <Image src={localImage} alt="" /> -->
 <div>
   <h2 class="t-heading">Free patterns
     <!-- <span class="highlight-container">
@@ -14,6 +19,11 @@ const squiggleUrl = `url("${squiggle}")`
   <p class="t-new-body">Knit with any <span class="highlight-text">yarn weight
   </span>, using <span class="highlight-text">your own gauge
   </span>.</p>
+  {allFreePatterns && (
+    <div></div>
+  )}
+  <!-- {knittingGauge && <Image src={knittingGauge.frontmatter.coverImage} alt="placeholder" width={360} aspectRatio="2:3" />} -->
+  <!-- {knittingGauge && } -->
 </div>
 
 <style define:vars={{ squiggleUrl }}>
