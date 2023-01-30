@@ -70,6 +70,15 @@
   }
 }
 
+.dark {
+  --brand-color-secondary: var(--brand-color-black-30);
+  --background-primary: #1b1b1b;
+  --background-secondary: #343434;
+  --background-tertiary: #4e4e4e;
+  --text-primary: #fff;
+  --text-secondary: #cdcdcd;
+}
+
 /* BASE */
 
 html, body {
