@@ -100,6 +100,10 @@ body {
   width: 100%;
 }
 
+button {
+  color: var(--text-secondary);
+}
+
 /* LAYOUT  */
 
 .site-wrapper {
