@@ -152,8 +152,6 @@ button {
   .l-container--base {
     padding-left: calc((100vw - var(--width-base)) / 2);
     padding-right: calc((100vw - var(--width-base)) / 2);
-    max-width: 980px;
-    max-width: var(--width-md-10-col);
   }
 }
 @media (min-width: 1040px) {
