@@ -1,6 +1,7 @@
 ---
 title: "How to Knit with Your Own Gauge"
 category: "knitting tips"
+coverImage: "/knitting-gauge-formula.jpeg"
 ---
 NOW YOU DON'T REALLY NEED TO DO A LITTLE MATH!
 
