@@ -6,6 +6,19 @@ import localImage from "../knitting-gauge-formula.jpeg"
 import squiggle from "../icons/squiggle.svg"
 const squiggleUrl = `url("${squiggle}")`
 const allFreePatterns = await getCollection("free-patterns")
+const patternsByCategories = allFreePatterns.reduce(
+  (accumulator, entry) => {
+  if (entry.data.category) {
+    const { category } = entry.data
+    if (accumulator[category]) {
+      accumulator[category].push(entry)
+    } else {
+      accumulator[category] = [entry]
+    }
+  }
+  return accumulator
+}, {})
+// console.log(patternsByCategories)
 let categories = allFreePatterns.map(e => e.data.category)
 const set = new Set()
 const uniqueCategories = []
