@@ -1,34 +1,75 @@
 ---
 import { Image } from "@astrojs/image/components"
 import { Icon } from "astro-icon"
+import { getCollection } from "astro:content"
 import localImage from "../knitting-gauge-formula.jpeg"
 import squiggle from "../icons/squiggle.svg"
 const squiggleUrl = `url("${squiggle}")`
-const allFreePatterns = await Astro.glob("../pages/free-patterns/*.md")
-const knittingGauge = allFreePatterns.find(e => e.frontmatter.title === "How to Knit with Your Own Gauge")
+const allFreePatterns = await getCollection("free-patterns")
+let categories = allFreePatterns.map(e => e.data.category)
+const sweaterIndex = categories.findIndex(e => e === "sweater")
+if (sweaterIndex) {
+  const sweaterArr = categories.splice(sweaterIndex, 1)
+  categories = [...sweaterArr, ... categories]
+}
 ---
 <!-- <Image src={localImage} alt="" /> -->
-<div>
-  <h2 class="t-heading">Free patterns
-    <!-- <span class="highlight-container">
-      <span class="highlight">
-        <Icon name="squiggle" />
-      </span>yarn weight
-    </span> -->
-  </h2>
-  <p class="t-new-body">Knit with any <span class="highlight-text">yarn weight
-  </span>, using <span class="highlight-text">your own gauge
-  </span>.</p>
-  {allFreePatterns && (
-    <div></div>
-  )}
+<div class="collection">
+  <div class="collection-header">
+    <h2 class="t-heading">Free patterns
+    </h2>
+    <p class="t-new-body">Knit with any <span class="highlight-text">yarn weight
+    </span>, using <span class="highlight-text">your own gauge
+    </span>.</p>
+  </div>
+  <div class="collection-aside">
+    <ul>
+      {categories.map((c, index) => (
+        <li>
+          <button class={index === 0 ? "btn-underline" : ""}>
+          {c}
+          </button>
+        </li>
+      ))}
+      </ul>
+  </div>
+
   <!-- {knittingGauge && <Image src={knittingGauge.frontmatter.coverImage} alt="placeholder" width={360} aspectRatio="2:3" />} -->
   <!-- {knittingGauge && } -->
 </div>
 
 <style define:vars={{ squiggleUrl }}>
+  .collection {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .collection-header {
+    margin-bottom: var(--spacing-sizing-3);
+    width: 100%;
+  }
+  .collection-aside ul li:not(:last-child) {
+    margin-bottom: var(--spacing-sizing-2);
+  }
+  .collection-aside button {
+    text-transform: capitalize;
+  }
   .highlight-container {
     position: relative;
+  }
+  .btn-underline {
+    position: relative;
+  }
+  .btn-underline::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: calc(100% - 1px);
+    height: 3px;
+    background: url("/wavy-line-cream.svg") center left repeat;
+  }
+  .light .btn-underline::before {
+    filter: invert(90%);
   }
   .highlight {
     left: 50%;
