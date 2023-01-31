@@ -7,6 +7,19 @@ import squiggle from "../icons/squiggle.svg"
 const squiggleUrl = `url("${squiggle}")`
 const allFreePatterns = await getCollection("free-patterns")
 let categories = allFreePatterns.map(e => e.data.category)
+const set = new Set()
+const uniqueCategories = []
+categories.forEach(c => {
+  if (!set.has(c)) {
+    if (c === "sweater") {
+      uniqueCategories.unshift(c)
+    } else {
+      uniqueCategories.push(c)
+    }
+    set.add(c)
+  }
+})
+console.log(uniqueCategories)
 const sweaterIndex = categories.findIndex(e => e === "sweater")
 if (sweaterIndex) {
   const sweaterArr = categories.splice(sweaterIndex, 1)
