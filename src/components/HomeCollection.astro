@@ -50,7 +50,7 @@ if (sweaterIndex) {
   </div>
   <div class="collection-aside">
     <ul>
-      {categories.map((c, index) => (
+      {uniqueCategories.map((c, index) => (
         <li>
           <button class={index === 0 ? "btn-underline" : ""}>
           {c}
@@ -58,6 +58,13 @@ if (sweaterIndex) {
         </li>
       ))}
       </ul>
+  </div>
+  <div class="collection-content">
+    {uniqueCategories.map(cat => {
+      return (
+      <div class={cat === "sweater" ? "is-active" : ""} data-collection-patterns={cat}>
+      </div>
+    )})}
   </div>
 
   <!-- {knittingGauge && <Image src={knittingGauge.frontmatter.coverImage} alt="placeholder" width={360} aspectRatio="2:3" />} -->
