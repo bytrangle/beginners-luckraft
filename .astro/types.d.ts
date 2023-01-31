@@ -63,9 +63,23 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"free-patterns": {
+"balaclava.md": {
+  id: "balaclava.md",
+  slug: "balaclava",
+  body: string,
+  collection: "free-patterns",
+  data: any
+},
 "basic-dog-sweater.md": {
   id: "basic-dog-sweater.md",
   slug: "basic-dog-sweater",
+  body: string,
+  collection: "free-patterns",
+  data: any
+},
+"big-cable-braid-hat.md": {
+  id: "big-cable-braid-hat.md",
+  slug: "big-cable-braid-hat",
   body: string,
   collection: "free-patterns",
   data: any
@@ -94,6 +108,27 @@ declare module 'astro:content' {
 "round-neck-vest.md": {
   id: "round-neck-vest.md",
   slug: "round-neck-vest",
+  body: string,
+  collection: "free-patterns",
+  data: any
+},
+"set-in-sleeve-v-neck-sweater.md": {
+  id: "set-in-sleeve-v-neck-sweater.md",
+  slug: "set-in-sleeve-v-neck-sweater",
+  body: string,
+  collection: "free-patterns",
+  data: any
+},
+"square-neck-cabled-raglan-sweater.md": {
+  id: "square-neck-cabled-raglan-sweater.md",
+  slug: "square-neck-cabled-raglan-sweater",
+  body: string,
+  collection: "free-patterns",
+  data: any
+},
+"two-color-brioche-hat.md": {
+  id: "two-color-brioche-hat.md",
+  slug: "two-color-brioche-hat",
   body: string,
   collection: "free-patterns",
   data: any
