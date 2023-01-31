@@ -1,6 +1,7 @@
 ---
 title: "DIY Knit Fun Cardigan with Diagonal Pockets"
 category: "cardigan"
+coverImage: "/v-neck-cardigan-pockets.jpeg"
 ---
 Step by step tutorial :)
 

@@ -1,6 +1,7 @@
 ---
 title: "DIY Knit Round Neck Complete Seamless Vest"
 category: "vest"
+coverImage: "/round-neck-vest.jpeg"
 ---
 This is the most interesting way to knit a vest!​
 

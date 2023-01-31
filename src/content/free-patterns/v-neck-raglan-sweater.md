@@ -1,6 +1,7 @@
 ---
 title: "DIY Knit V Neck Raglan Sweater"
 category: "sweater"
+coverImage: "/v-nec-raglan-sweater.jpeg"
 ---
 Super Cute Girly Sweater!​
 
