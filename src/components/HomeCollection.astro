@@ -63,6 +63,15 @@ if (sweaterIndex) {
     {uniqueCategories.map(cat => {
       return (
       <div class={cat === "sweater" ? "is-active" : ""} data-collection-patterns={cat}>
+        {patternsByCategories[cat].map(p => (
+          <div class="card-thumbnail">
+            <span class="object-fit">
+              {p.data.coverImage && (
+                <Image src={import(p.data.coverImage)} alt="" />
+              )}
+            </span>
+          </div>
+        ))}
       </div>
     )})}
   </div>
@@ -77,11 +86,31 @@ if (sweaterIndex) {
     margin-bottom: var(--spacing-sizing-3);
     width: 100%;
   }
+  .collection-aside {
+    flex: 1;
+  }
   .collection-aside ul li:not(:last-child) {
     margin-bottom: var(--spacing-sizing-2);
   }
   .collection-aside button {
     text-transform: capitalize;
+  }
+  .collection-content {
+    width: 75%;
+    flex: 5;
+  }
+  .collection-content [data-collection-patterns] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gutter-sm);
+  }
+  .collection-content [data-collection-patterns]:not(.is-active) {
+    display: none;
+  }
+  .card-thumbnail img {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
   }
   .highlight-container {
     position: relative;
