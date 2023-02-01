@@ -22,14 +22,14 @@
   --spacing-sizing-025: calc(var(--spacing-sizing-base) / 4);
   --spacing-sizing-05: calc(var(--spacing-sizing-base) / 2);
   --spacing-sizing-075: calc(var(--spacing-sizing-base) * 0.75);
-  --spacing-sizing-1\/5: calc(var(--spacing-sizing-base) * 1.5);
+  --spacing-sizing-1\.5: calc(var(--spacing-sizing-base) * 1.5);
   --spacing-sizing-2: calc(var(--spacing-sizing-base) * 2);
   --spacing-sizing-3: calc(var(--spacing-sizing-base) * 3);
   --spacing-sizing-4: calc(var(--spacing-sizing-base) * 4);
   --spacing-sizing-5: calc(var(--spacing-sizing-base) * 5);
   --text-base: var(--spacing-sizing-base);
-  --text-xl: var(--spacing-sizing-1\/5);
-  --text-md: var(--spacing-sizing-1\/5);
+  --text-xl: var(--spacing-sizing-1\.5);
+  --text-md: var(--spacing-sizing-1\.5);
   --text-xxl: var(--spacing-sizing-3);
   --type-emphasis-m: var(--font-body-strong-weight) var(--type-smaller-font-size) /1.23 var(--font-body);
   --type-smaller-font-size: 0.833rem;
@@ -133,7 +133,7 @@ button {
 .l-container {
   margin-left: auto;
   margin-right: auto;
-  --space-hz: var(--spacing-sizing-1\/5);
+  --space-hz: var(--spacing-sizing-1\.5);
 }
 .l-container--10-of-12 {
   padding-left: var(--space-hz);
