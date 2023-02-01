@@ -1,7 +1,7 @@
 ---
 title: "DIY Knit Big Cable Braid Hat"
 category: "hat"
-coverImage: "/big-cable-braid-hat.jpeg"
+coverImage: "../../public/big-cable-braid-hat.jpeg"
 ---
 Big Cable Braid is so cute❤❤​
 
