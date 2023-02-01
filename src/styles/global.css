@@ -27,6 +27,8 @@
   --spacing-sizing-3: calc(var(--spacing-sizing-base) * 3);
   --spacing-sizing-4: calc(var(--spacing-sizing-base) * 4);
   --spacing-sizing-5: calc(var(--spacing-sizing-base) * 5);
+  --gutter-sm: calc(var(--spacing-sizing-075) * 2);
+  --gutter-md: calc(var(--spacing-sizing-1\.5) * 2);
   --text-base: var(--spacing-sizing-base);
   --text-xl: var(--spacing-sizing-1\.5);
   --text-md: var(--spacing-sizing-1\.5);
