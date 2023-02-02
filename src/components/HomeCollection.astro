@@ -64,13 +64,19 @@ if (sweaterIndex) {
       return (
       <div class={cat === "sweater" ? "is-active" : ""} data-collection-patterns={cat}>
         {patternsByCategories[cat].map(p => (
-          <div class="card-thumbnail">
+          <div class="pattern-card">
+            <div class="card-thumbnail">
             <span class="object-fit">
               {p.data.coverImage && (
-                <Image src={import(p.data.coverImage)} alt="" />
+                <Image src={import(p.data.coverImage)} alt="" width={400} aspectRatio="1:1" />
               )}
             </span>
           </div>
+          <div class="pattern-metadata">
+            {p.data.title}
+          </div>
+          </div>
+
         ))}
       </div>
     )})}
