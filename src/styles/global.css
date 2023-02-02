@@ -106,6 +106,7 @@ body {
 
 button {
   color: var(--text-secondary);
+  cursor: pointer;
 }
 
 /* LAYOUT  */
