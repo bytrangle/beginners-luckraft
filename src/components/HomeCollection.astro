@@ -52,7 +52,10 @@ if (sweaterIndex) {
     <ul>
       {uniqueCategories.map((c, index) => (
         <li>
-          <button class={index === 0 ? "btn-underline" : ""}>
+          <button
+            class={index === 0 ? "btn-underline" : ""}
+            data-collection-patterns-trigger={c}
+          >
           {c}
           </button>
         </li>
