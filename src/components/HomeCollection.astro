@@ -86,6 +86,30 @@ if (sweaterIndex) {
   </div>
 </div>
 
+<script>
+  const categoryButtons = document.querySelectorAll("button[data-collection-patterns-trigger]")
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement
+      if (target.classList.contains("btn-underline")) {
+        return
+      }
+      const newlySelectedCategory = target.getAttribute("data-collection-patterns-trigger")
+      console.log({newlySelectedCategory})
+      const currentlySelectedButton = document.querySelector("button.btn-underline[data-collection-patterns-trigger]")
+      if (currentlySelectedButton && currentlySelectedButton.classList) {
+        currentlySelectedButton.classList.remove("btn-underline")
+      }
+      target.classList.add("btn-underline")
+      const activeCollection = document.querySelector(".collection-content .is-active[data-collection-patterns]")
+      console.log({ activeCollection })
+      const newlySelectedCollection = document.querySelector(`.collection-content [data-collection-patterns="${newlySelectedCategory}"`)
+      console.log({ newlySelectedCollection })
+      activeCollection.classList.remove("is-active")
+      newlySelectedCollection.classList.add("is-active")
+    })
+  })
+</script>
 <style define:vars={{ squiggleUrl }}>
   .collection {
     display: flex;
