@@ -138,6 +138,10 @@ button {
   margin-right: auto;
   --space-hz: var(--spacing-sizing-1\.5);
 }
+.l-container, .l-footer {
+  padding-left: var(--space-hz);
+  padding-right: var(--space-hz);
+}
 .l-container--10-of-12 {
   padding-left: var(--space-hz);
   padding-right: var(--space-hz);
