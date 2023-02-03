@@ -7,6 +7,9 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 a {
   text-decoration: none;
 }
+a, abbr {
+  color: inherit;
+}
 
 ol[class], li[class] {
   list-style: none;
