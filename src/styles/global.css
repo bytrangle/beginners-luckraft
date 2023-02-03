@@ -170,6 +170,15 @@ button {
 .l-main {
   overflow-x: hidden;
 }
+.l-footer {
+  --space-hz: var(--spacing-sizing-1\.5);
+}
+@media (min-width: 1240px) {
+  .l-footer {
+    --space-hz: calc((100vw - var(--width-base)) / 2);
+  }
+}
+
 .top-nav-container {
   --height-top-nav: var(--spacing-sizing-4);
   max-width: var(--width-content-max);
