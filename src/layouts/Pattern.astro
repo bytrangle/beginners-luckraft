@@ -1,0 +1,11 @@
+---
+const { post } = Astro.props
+const { title } = post.data
+const { Content } = await post.render()
+---
+<main>
+  <h1>{title}</h1>
+  <article>
+    <Content />
+  </article>
+</main>
