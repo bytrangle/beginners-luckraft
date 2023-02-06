@@ -30,7 +30,9 @@
   --gutter-sm: calc(var(--spacing-sizing-075) * 2);
   --gutter-md: calc(var(--spacing-sizing-1\.5) * 2);
   --text-base: var(--spacing-sizing-base);
+  --text-xs: calc(var(--spacing-sizing-base) * 0.75);
   --text-sm: calc(var(--spacing-sizing-base) * 0.875);
+  --text-md: calc(var(--spacing-sizing-base) * 1.25);
   --text-xl: var(--spacing-sizing-1\.5);
   --text-md: var(--spacing-sizing-1\.5);
   --text-xxl: var(--spacing-sizing-3);
@@ -52,7 +54,9 @@
 @media (min-width: 1000px) {
   :root {
     --text-base: calc(var(--spacing-sizing-base) * 1.125);
+    --text-xs: calc(var(--spacing-sizing-base) * 0.875);
     --text-sm: var(--spacing-sizing-base);
+    --text-md: calc(var(--spacing-sizing-base) * 1.5);
     --text-xl: var(--spacing-sizing-2);
     --text-xxl: var(--spacing-sizing-4);
   }
