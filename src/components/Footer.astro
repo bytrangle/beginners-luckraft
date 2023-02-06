@@ -1,5 +1,5 @@
 ---
-import Social from "./Social.astro"
+import "@fontsource/inter/100.css"
 const platform = "github"
 const username = "withastro"
 ---
@@ -10,8 +10,27 @@ const username = "withastro"
     margin-top: 2rem;
   }
 </style>
-<footer>
-  <Social platform="twitter" username="astrodotbuild" />
+<footer class="l-footer footer">
+  <div class="footer-nav-group">
+  <h3 class="footer-nav-group__title t-footer-nav-group-title">Contact</h3>
+  <ul class="footer-nav-group-items">
+    <li>
+      <a href="mailto:beginners-luckcraft@gmail.com" class="t-footer-link">beginners-luckraft@gmail.com</a>
+    </li>
+  </ul>
+  </div>
+  <div class="footer-nav-group">
+    <h3 class="footer-nav-group__title t-footer-nav-group-title">Find me on</h3>
+    <ul class="footer-nav-group-items">
+      <li>
+        <a href="https://www.ravelry.com/patterns/sources/beginners-luckraft-ravelry-store" class="t-footer-link">Ravelry</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@BeginnersLUCKraft">Youtube</a>
+      </li>
+    </ul>
+  </div>
+  <!-- <Social platform="twitter" username="astrodotbuild" />
   <Social platform ="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
+  <Social platform="youtube" username="astrodotbuild" /> -->
 </footer>
