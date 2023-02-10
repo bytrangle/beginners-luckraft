@@ -1,4 +1,5 @@
 ---
+import Layout from "@layouts/Layout.astro"
 const { post } = Astro.props
 const { title, coverImage } = post.data
 const { Content } = await post.render()
@@ -10,9 +11,11 @@ if (matchImportFromPublicDir) {
 }
 const ogUrl = new URL(resolvedCoverImage ? resolvedCoverImage : `v-neck-raglan-sweater.jpeg`, Astro.url.origin).href
 ---
-<main>
-  <h1>{title}</h1>
-  <article>
-    <Content />
-  </article>
-</main>
+<Layout title={title} ogImage={ogUrl}>
+  <main>
+    <h1>{title}</h1>
+    <article>
+      <Content />
+    </article>
+  </main>
+</Layout>
