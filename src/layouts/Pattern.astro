@@ -16,10 +16,12 @@ const ogUrl = new URL(resolvedCoverImage ? resolvedCoverImage : `v-neck-raglan-s
 <Layout title={title} ogImage={ogUrl}>
   <Header />
   <main>
-    <h1>{title}</h1>
-    <article>
-      <Content />
-    </article>
+    <section class="l-container l-container--10-of-12 blog-section">
+      <h1>{title}</h1>
+      <article>
+        <Content />
+      </article>
+    </section>
   </main>
   <Footer />
 </Layout>
