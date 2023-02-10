@@ -263,15 +263,6 @@ button {
   --text-secondary: #4e4e4e;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-h1 {
-  margin: 1rem 0;
-  font-size: 2.5rem;
-}
-
 /* nav styles */
 .hamburger {
   padding-right: 20px;
