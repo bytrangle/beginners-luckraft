@@ -9,7 +9,7 @@ const {
   ogImage = SITE.ogImage
 } = Astro.props
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'http://localhost:3000')
 
 const socialImageURL = new URL(
   ogImage ? ogImage : SITE.ogImage,
