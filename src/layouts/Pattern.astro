@@ -1,7 +1,14 @@
 ---
 const { post } = Astro.props
-const { title } = post.data
+const { title, coverImage } = post.data
 const { Content } = await post.render()
+let resolvedCoverImage = null
+const matchImportFromPublicDirReg = /\.\/public/g
+const matchImportFromPublicDir = matchImportFromPublicDirReg.exec(coverImage)
+if (matchImportFromPublicDir) {
+  resolvedCoverImage = coverImage.slice(matchImportFromPublicDir.index + matchImportFromPublicDir[0].length)
+}
+const ogUrl = new URL(resolvedCoverImage ? resolvedCoverImage : `v-neck-raglan-sweater.jpeg`, Astro.url.origin).href
 ---
 <main>
   <h1>{title}</h1>
