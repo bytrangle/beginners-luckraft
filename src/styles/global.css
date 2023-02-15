@@ -235,6 +235,11 @@ button {
   max-width: 100%;
   width: auto;
 }
+.t-blog-title {
+  line-height: var(--line-height-sm);
+  font-size: var(--text-xxl);
+  font-weight: var(--font-weight-black);
+}
 .footer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
