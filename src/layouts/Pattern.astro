@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components"
 import Layout from "@layouts/Layout.astro"
 import Header from "@components/Header.astro"
 import Footer from "@components/Footer.astro"
@@ -16,10 +17,17 @@ const ogUrl = new URL(resolvedCoverImage, Astro.url.origin).href
 <Layout title={title} ogImage={ogUrl}>
   <Header />
   <main>
-    <section class="l-container l-container--10-of-12 blog-section">
-      <h1>{title}</h1>
+    <section class="l-container l-container--10-of-12">
       <article>
-        <Content />
+        <div class="blog-section blog-section--current">
+          <div class="blog-post__headline">
+            <h1 class="t-blog-title">{title}</h1>
+          </div>
+          <div class="blog-post__hero-image">
+            <Image src={resolvedCoverImage} alt="" width={600} aspectRatio="3:2" />
+          </div>
+        </div>
+      <Content />
       </article>
     </section>
   </main>
