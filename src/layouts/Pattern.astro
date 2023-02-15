@@ -5,7 +5,7 @@ import Footer from "@components/Footer.astro"
 const { post } = Astro.props
 const { title, coverImage } = post.data
 const { Content } = await post.render()
-let resolvedCoverImage = null
+let resolvedCoverImage = coverImage
 const matchImportFromPublicDirReg = /\.\/public/g
 const matchImportFromPublicDir = matchImportFromPublicDirReg.exec(coverImage)
 if (matchImportFromPublicDir) {
