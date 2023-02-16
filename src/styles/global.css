@@ -12,6 +12,7 @@
   --font-fallback: BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
   --font-body: Inter, var(--font-fallback);
   --font-body-strong-weight: 600;
+  --font-weight-bold: 700;
   --font-weight-black: 900;
   --line-height-xs: 1;
   --line-height-sm: 1.25;
