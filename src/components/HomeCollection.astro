@@ -18,7 +18,7 @@ const patternsByCategories = allFreePatterns.reduce(
   }
   return accumulator
 }, {})
-// console.log(patternsByCategories)
+console.log(allFreePatterns)
 let categories = allFreePatterns.map(e => e.data.category)
 const set = new Set()
 const uniqueCategories = []
@@ -69,7 +69,11 @@ if (sweaterIndex) {
         {patternsByCategories[cat].map(p => (
           <div class="pattern-card">
             <div class="pattern-metadata">
-              <h3 class="t-article-card-title">{p.data.title}</h3>
+              <h3 class="t-article-card-title">
+                <a aria-label={p.data.title} class="pattern-card__link" href={`/pattern/${p.slug}`}>
+                {p.data.title}
+                </a>
+              </h3>
             </div>
             <div class="pattern-card__thumbnail">
               <span class="object-fit">
@@ -145,6 +149,14 @@ if (sweaterIndex) {
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+  .pattern-card__link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
   }
   .pattern-metadata {
     order: 3;
