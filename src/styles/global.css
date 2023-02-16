@@ -41,6 +41,8 @@
   --text-xl: var(--spacing-sizing-1\.5);
   --text-md: var(--spacing-sizing-1\.5);
   --text-xxl: var(--spacing-sizing-3);
+  --transition-duration-base: .2s;
+  --transition-duration-md: .4s;
   --type-emphasis-m: var(--font-body-strong-weight) var(--type-smaller-font-size) /1.23 var(--font-body);
   --type-smaller-font-size: 0.833rem;
   --width-base: 1180px;
