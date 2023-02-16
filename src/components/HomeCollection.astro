@@ -141,7 +141,18 @@ if (sweaterIndex) {
   .collection-content [data-collection-patterns]:not(.is-active) {
     display: none;
   }
-  .card-thumbnail img {
+  .pattern-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .pattern-metadata {
+    order: 3;
+  }
+  .pattern-card__thumbnail {
+    order: 1;
+  }
+  .pattern-card__thumbnail img {
     height: auto;
     object-fit: cover;
     width: 100%;
