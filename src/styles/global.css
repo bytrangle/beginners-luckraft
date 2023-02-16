@@ -228,6 +228,17 @@ button {
   font-size: var(--text-xl);
   font-weight: var(--font-weight-black);
 }
+.t-article-card-title {
+  line-height: 1.5;
+  line-height: var(--line-height-md);
+  font-weight: 700;
+  font-weight: var(--font-weight-bold);
+}
+@media (min-width: 760px) {
+  .t-article-card-title {
+    font-size: var(--text-md);
+  }
+}
 .top-nav-logo-link {
   max-height: var(--height-top-nav);
 }
