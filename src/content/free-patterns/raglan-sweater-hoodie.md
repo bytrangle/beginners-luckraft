@@ -1,7 +1,7 @@
 ---
 title: "DIY Knit Hoodie Raglan Placket Collar Sweater"
 category: "sweater"
-coverImage: "../../public/hoodie-raglan-sweater.jpeg"
+coverImage: "/raglan-sweater-hoodie.jpeg"
 ---
 Seamless, Top Down, and Size Adjustable! Super Cute!​
 

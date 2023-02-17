@@ -1,7 +1,7 @@
 ---
 title: "DIY Knit Cotton Lace Summer Coverup"
 category: "t-shirt"
-coverImage: "../../public/cotton-lace-summer-coverup.jpeg"
+coverImage: "/cotton-lace-summer-coverup.jpeg"
 ---
 99.9% Seamless, and Size adjustable with Round Neck!!
 

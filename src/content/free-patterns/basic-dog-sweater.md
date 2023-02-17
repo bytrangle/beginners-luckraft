@@ -1,7 +1,7 @@
 ---
 title: "DIY Knit Basic Dog Sweater Super Step by Step"
 category: "dog"
-coverImage: "../../public/basic-dog-sweater.jpeg"
+coverImage: "/basic-dog-sweater.jpeg"
 ---
 If you're a beginner, you must watch this!​
 
